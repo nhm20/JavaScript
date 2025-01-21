@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(num1, num2) {
+        var result = num1 + num2;
+        return result; //return undefined if no return
+      }
+
+      document.write(sum(34, 34));
+      var res = sum(34, 34);
+      document.write(res);
+      //func expression - assign the function to variable
+      var add = function sum1(num1, num2) {
+        var result = num1 + num2;
+        return result;
+      };
+      // document.write(sum1(34, 34));          //error
+      document.write(add(3, 2));
+    </script>
+  </body>
+</html>

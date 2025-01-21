@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //      var myObj={
+      //      salary:20000,
+      //      getSalary:function(a,b){
+      //           console.log(this.salary)
+      //           console.log(a)
+      //           console.log(b)
+      //      }
+      // }
+      // myObj.getSalary(3,24)
+      //      employee={salary:30000 }
+      //      employee2={salary:50000 }
+      //      employee3={salary:80000 }
+      //      myObj.getSalary.call(employee,4,69);
+      //      myObj.getSalary.apply(employee,[4,69]);
+      //      var f1=myObj.getSalary.bind(employee,4,69);
+      //      f1()
+      //      f1(3,6)
+
+      var myObj = {
+        salary: 20000,
+        getSalary: function (a, b) {
+          console.log(this.salary);
+          console.log(a, b);
+        },
+        greet: function (wish) {
+          console.log(this.name, wish);
+        },
+      };
+      employee = { salary: 30000 };
+      employee2 = { salary: 50000 };
+      employee3 = { salary: 80000, name: "xyz" };
+      var f1 = myObj.greet.bind(employee3);
+      f1("good noon");
+      f1("good evening");
+      console.log(f1);
+    </script>
+  </body>
+</html>

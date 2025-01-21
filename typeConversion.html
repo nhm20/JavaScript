@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Type conversion - Implicit(coersion),Explicit
+
+    <script>
+      document.write("<br>");
+      document.write(12 + "34"); //to string
+      document.write("<br>");
+      document.write(12 - "34"); //to num
+      document.write("<br>");
+      document.write(12 - "s"); //nan
+      document.write("<br>");
+      document.write(12 * "s"); //nan
+      document.write("<br>");
+
+      document.write(false + 23); //23
+      document.write("<br>");
+
+      var x = "java";
+      document.write(typeof x + "  " + x);
+      document.write("<br>");
+      document.write(Number("6"));
+      document.write("<br>");
+      document.write(Number(x));
+      document.write("<br>");
+      document.write(typeof x);
+
+      document.write("<br>");
+      x = "345hg";
+      var y = parseInt(x);
+      document.write(typeof x + " " + y);
+      document.write("<br>");
+
+      var y = parseInt("d345hg");
+      document.write(y);
+      document.write("<br>");
+
+      var z = parseInt("34.5hg");
+      document.write(z);
+      document.write("<br>");
+
+      var z = parseFloat("34.5hg");
+      document.write("z" + " " + z);
+      document.write("<br>");
+
+      var a = 34;
+      x = String(a);
+      document.write("<br>");
+      document.write(typeof x +" "+ x);
+      x = String(undefined);
+      document.write("<br>");
+      document.write(typeof x +" "+ x);
+      document.write("<br>");
+
+      x = String(null);
+      document.write("<br>");
+      document.write(typeof x +" "+ x);
+      document.write("<br>");
+
+      x = String(true);
+      document.write("<br>");
+      document.write(typeof x +" "+ x);
+      document.write("<br>");
+
+      x = Number(null);
+      document.write("<br>");
+      document.write(typeof x +" "+ x);
+      document.write("<br>");
+
+      y = Boolean(3);
+      document.write(y);
+      document.write("<br>");
+      
+      y = Boolean("");
+      document.write(y);
+      document.write("<br>");
+
+      y = Boolean(null);
+      document.write(y);
+      document.write("<br>");
+    </script>
+  </body>
+</html>

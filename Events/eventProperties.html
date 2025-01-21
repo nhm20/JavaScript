@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          #special{
+               position: absolute;
+               top:40%;
+               left:40%;
+          }
+          #sp{
+               height:30px;
+          }
+     </style>
+</head>
+<body>
+<body >
+     <div id="special">
+          Name:<input id="sp" type="text"/><br><br>
+          <button id="b1" >Change background</button>
+          <script>
+               let btn=document.getElementById("b1");
+               btn.onclick=function(){
+                    document.body.style.backgroundColor='orange';
+               };
+               btn.onclick=change;
+               function change(){
+                    document.body.style.backgroundColor='orange';
+               }
+          </script>
+     </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(getLatLong, error, {
+          maximumAge: 10,
+          timeout: 100,
+          enableHighAccuracy: true, //false by default
+        });
+      }
+      function getLatLong(data) {
+        console.log(data);
+        console.log(data.coords);
+        console.log(data.coords.latitude);
+        console.log(data.coords.longitude);
+      }
+      function error(data) {
+        console.log(data);
+        alert("cannot read user location");
+      }
+    </script>
+  </body>
+</html>

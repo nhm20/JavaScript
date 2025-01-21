@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Composite
+    <script>
+      document.write("Arrays");
+      let num = [33, 34, 245];
+      document.write(num);
+      document.write(typeof num);
+
+      num = [34, "xyz", true, null, undefined];
+      document.write(num);
+
+      document.write("Objects");
+      names = {
+        //any
+        name: "xyz",
+        age: 34,
+        land: null,
+      };
+      console.log(names);
+      document.write(names);
+
+      let names = [
+        {
+          name: "xyz",
+          age: 34,
+          land: null,
+        },
+        {
+          name: "xyz",
+          age: 34,
+          land: null,
+        },
+        {
+          name: "xyz",
+          age: 34,
+          land: null,
+        },
+      ];
+      console.log(names);
+      document.write(names);
+      console.log(names[0])
+    </script>
+  </body>
+</html>

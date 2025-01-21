@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          function user(n,a,p){
+               this.name=n;
+               this.age=a;
+               this.place=p;
+          }
+          let user1=new user("abc",43,"hyd");
+          console.log(user1);
+          console.log(user1.name);
+
+          function movie(n,a,p){
+               this.name=n;
+               this.age=a;
+               this.place=p;
+          }
+          let user2=new movie("abc",43,"hyd");
+          console.log(user2);
+          console.log(user2.name);
+          // user2.mobile(43434555);
+          console.log(user2.mobile);
+     </script>
+</body>
+</html>

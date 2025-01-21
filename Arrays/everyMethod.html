@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+      <!-- find method is call back function
+     it returns the first element of array for which call back function returns true -->
+     
+     <script>
+          let marks=[45,34,76,45,878,345,7];
+     var pass=marks.every(function(ele,key,arr){
+          return marks>45;
+     })
+     console.log(pass);
+     var pass2=marks.every(function(ele,key,arr){
+          return marks>12;
+     })
+     console.log(pass2);
+     </script>     
+</html>

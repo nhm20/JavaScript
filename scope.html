@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //local scope
+      function test() {
+        var num = 23;
+        console.log(num);
+      }
+      // console.log(num);    error local scope
+
+      //global scope
+      function test() {
+        var num = y + 23;
+        console.log(num);
+      }
+      var y = 29;
+      test();
+
+      //  block level scope - var,not possible with let,const
+      const num1 = 34;
+      function test() {
+        console.log(b);
+        console.log(num1);
+      }
+      var a = 30;
+      {
+        var b = 342;
+      }
+      console.log(b);
+      test();
+
+      function test() {
+        console.log(x);
+        console.log(num1);
+      }
+      {
+        let x = 39;
+      }
+      console.log(x);
+      test();
+    </script>
+  </body>
+</html>

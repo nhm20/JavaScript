@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //set:collection of unique values and is a class in order like arrays
+      // array:collection of values
+      let s1 = new Set();
+      console.log(typeof s1);
+      console.log(s1);
+
+      s1.add(45);
+      console.log(s1);
+      s1.add(43);
+      s1.add(43).add(5).add(65);
+      a1 = [43, 45, 55, 55, 45, 32];
+      console.log(a1);
+      let s2 = new Set(a1);
+      console.log(s2);
+
+      s4 = "dyahgejj"; //string is also an array
+      let s3 = new Set(s4);
+      console.log(s3);
+
+      s3.delete("d"); //error if not present else returns true
+      console.log(s3);
+
+      status = s3.delete("y");   
+      console.log(s3);
+
+      let statu = s3.has("a");     //return true or false
+      console.log(s3);
+
+      console.log(s3.size)
+
+      s3.clear(); 
+      console.log(s3);
+
+      for (ele of s2) {
+        console.log(ele);
+      }
+
+      s2.forEach(function (ele, index, s) {
+        console.log(ele +" "+index+" "+s);
+      });
+
+      console.log(s2.entries());   //iterator
+
+      let itr = s2.entries();
+      console.log(itr.next());
+      console.log(itr.next());
+      console.log(itr.next());
+    </script>
+  </body>
+</html>

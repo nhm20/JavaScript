@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="one">this is paragraph</p>
+    <script>
+      let employee = {
+        id: 131,
+        email: "xhe@dmail.com",
+        personalInfo: {
+          name: "xyz",
+          mobile: 3222332223,
+          address: {
+            line1: "near unimall",
+            line2: "lpu",
+            city: "jalandar",
+            state: "telangana",
+          },
+        },
+      };
+      // console.log(employee.personallInfo?.mobile)
+      // console.log(employee.personalInfo?.address?.pincode?.one)
+      // console.log("hello")
+
+      // let par=document.getElementById("one").innerHTML
+      // console.log(par)
+      let par = document.getElementById("two")?.innerText;
+      console.log(par);
+      console.log("hello");
+    </script>
+  </body>
+</html>

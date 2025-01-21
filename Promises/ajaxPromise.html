@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="submit" class="button" id="special" value="Get data" />
+    <div id="data"></div>
+    <script>
+      let btn = document.getElementById("special");
+      let dataele = document.getElementById("data");
+
+      btn.onclick = function () {
+        let p = new Promise(function (resolve, reject) {
+          let xhr = new XMLHttpRequest();
+          xhr.open("GET", "test.txt", true);
+          xhr.send();
+          xhr.onload = function () {
+            if (xhr.status == 200) {
+              resolve(xhr.responseText);
+            } else {
+              reject("no data found");
+            }
+          }
+        })
+        p.then(function (data) {
+          console.log(data);
+        },function (errordata) {
+          console.log(errordata);
+        });
+     //    p.catch(function (errordata) {
+     //      console.log(errordata);
+     //    });
+      };
+    </script>
+  </body>
+</html>

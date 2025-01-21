@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #special {
+        color: blue;
+      }
+      .one {
+        background-color: rgb(0, 255, 0);
+      }
+      .two {
+        border: 5px solid rgb(244, 12, 171);
+      }
+      .three {
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="special" class="one">this is division one</div>
+    <script>
+      var x = document.getElementById("special");
+      x.setAttribute("class", "two"); // setAttribute adds but removes the prev style
+      x.classList.add("one");
+      console.log(x.classList);
+
+      x.classList.add("three");
+      console.log(x.classList);
+      x.classList.remove("one");
+    </script>
+  </body>
+</html>

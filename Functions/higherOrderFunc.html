@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          // higher order function is a function that receives another 
+          // function as argument or return another function or both
+          
+          // var arr=[1,2,3,4];
+          // function square(){
+          //      var squares=[];
+          //      for(ele of arr){
+          //           let res=ele*ele;
+          //           squares.push(res);
+          //      }
+          //      return squares;
+          // }
+          // let x=square(arr)
+          // console.log(x);
+          // function cube(){
+          //      var cubes=[];
+          //      for(ele of arr){
+          //           let res=ele*ele*ele;
+          //           cubes.push(res);
+          //      }
+          //      return cubes;
+          // }
+          // let y=cube(arr)
+          // console.log(y);
+          
+          //using higher order function
+          
+          var a1=[1,2,3,4]
+          function square(num){
+               return num*num;
+          }
+          function cube(num){
+               return num*num*num;
+          }
+          function increment(num){
+               return num+1;
+          }
+          function anyOperation(arr,operation){
+               let res=[]
+               for(ele of a1){
+                    res.push(operation(ele))
+               }
+               return res;
+          }
+          let x=anyOperation(a1,cube)
+          console.log(x);
+
+     </script>
+</body>
+</html>

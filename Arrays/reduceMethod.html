@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          // arr.reduce(function,accumulator default value)
+          // function can take 4 arguments
+          // function(acc,value,index,array)
+          // arr.reduce(function(acc,ele,index,arr){},8)
+          // this method returns a single value
+          var arr=[3,5,2,23,5,75,1];
+          var max=arr.reduce(function(acc,ele){
+               if(acc>ele){
+                    return acc;
+               }
+               else{
+                    return ele;
+               }
+          },arr[0]);
+          console.log(max);
+          var sum=arr.reduce(function(acc,ele){
+               return acc+ele;
+          },0);
+          console.log(sum);
+          var sum2=arr.reduce((acc,ele)=>acc+ele,0);
+          var sum2=arr.reduce(acc=>acc+ele,0);
+          console.log(sum2);
+     </script>
+</body>
+</html>

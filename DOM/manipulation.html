@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first">
+      <p>this is first paragraph in div1</p>
+      <p>this is second paragraph in div2</p>
+    </div>
+    <script>
+      var n = document.createElement("h1");
+      n.innerText="This is third para"
+      console.log(n);
+      var parent = document.getElementById("first");
+      console.log(parent);
+      parent.appendChild(n);
+    </script>
+  </body>
+</html>

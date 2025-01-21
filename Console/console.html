@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let s = "head:";
+      console.log("log method"); //dev time to print message
+      console.info("log method"); //prod time to inform message to user
+      console.warn("log method"); //to warn message
+      console.error("log method"); //to error message to the user
+      console.table(["xys", "abc"]); //to print arrays or objects
+      console.table({ name: "xys", age: 43, place: "32e" });   
+      console.clear();
+      console.assert(10 > 43, "condition false");  //to trigger a msg based on condition false
+      
+      console.count();
+      console.count();  // return no of times the value is counted
+
+      console.count("called");
+      console.count("called");
+
+
+      let x = +prompt("enter a number");
+      console.time("loop time:");  //to calc time to perform operation
+      while (x != 10) {
+        console.log("enter 10");
+        console.timeLog("loop time:");  // to time calc after returning
+        x = +prompt("enter a number");
+        console.count("called:");
+      }
+      console.timeEnd("loop time:");
+      console.countReset("called"); //to reset count to 0
+
+      console.group("group1");
+      console.log("group1 log 1");
+      console.log("group1 log 2");
+      console.log("group1 log 3");
+      console.groupEnd();
+
+      
+      console.group("group2");
+      console.log("group2 log 1");
+      console.log("group2 log 2");
+      console.log("group2 log 3");
+      console.groupEnd();
+    </script>
+  </body>
+</html>

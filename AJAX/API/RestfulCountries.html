@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <input type="submit" class="button" id="special" value="Get Data">
+     <div id="data"></div>
+     <script>
+          let btn=document.getElementById("special")
+          let dataele=document.getElementById("data")
+          btn.addEventListener('click',loadData)
+
+          function loadData(){
+               let xhr=new XMLHttpRequest();
+               //xhr.open('GET','https://restcountries.com/v3.1/all',true)
+               xhr.open('GET','https://restcountries.com/v3.1/name/india',true)
+               
+               xhr.send()
+               xhr.onload=function(){
+                    if(xhr.status==200){
+                    let result=xhr.responseText
+                    result=JSON.parse(result)
+                    // console.log(result)
+                    let [country]=result
+                    console.log(country)
+                    dataele.innerHTML=null
+                    }
+                    else
+                         dataele.innerHTML="Invalid Request";                   
+               }
+                xhr.onprogress=function(){
+               dataele.innerHTML="getting..."
+               }                   
+          }
+          
+     </script>
+</body>
+</html>

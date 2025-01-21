@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" onclick="updatecount()" value="click" />
+    <p id="count">clicked:0</p>
+    <script>
+      function outer(num1) {
+        function inner(num2) {
+          console.log(num1 + num2);
+        }
+        return inner;
+      }
+      var res = outer(7);
+      res(8);
+
+      function outer(num1) {
+        var x = 10;
+        function inner(num2) {
+          console.log(num1 + num2 + x);
+        }
+        return inner;
+      }
+      var res = outer(7);
+      res(8);
+    </script>
+  </body>
+</html>

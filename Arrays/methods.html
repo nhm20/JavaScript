@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var movies = ["rrr", "f2", "mi"];
+      movies.push("mohe");
+      document.writeln(movies);
+      document.writeln("<br>");
+
+      document.writeln(movies.pop());
+      document.writeln("<br>");
+      var name = movies.pop();
+      document.writeln(name);
+      document.writeln("<br>");
+      document.writeln(movies);
+      movies.unshift("maharshi"); //opposite to push, add the element at front
+      document.writeln("<br>");
+      document.writeln(movies);
+      var mov = movies.shift(); //opposite to push, add the element at front
+      document.writeln("<br>");
+      document.writeln(movies);
+
+      document.writeln("index of archarya" + indexOf("rrr"));     //-1 if its not present
+      var movies = ["rrr", "f2", "mi"];
+      var mov =movies.slice(0, 2);  // 0 to 2-1
+      document.writeln(mov);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var fruits = ["mango", "apple", "banana", "kiwi"];
+
+      for (element of fruits) {
+        document.write(element + "  ");
+      }
+      document.write("<br>");
+      var students = { 1: "amn", 32: "gf", 45: "deh" };
+     //  for (element of students ) {                 error
+     //       document.write(students +"<br>");
+     //  }
+      for (key in students) {
+        document.write(key + "   >>    " + students[key] + "<br>");
+      }
+
+      var str = "india";
+      for (i in str) {
+        document.write(i + "   >>    " + str[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

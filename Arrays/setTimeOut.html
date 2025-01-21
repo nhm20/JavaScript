@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      this is heading
+      <!-- min 2 args must -->
+       <!-- fun,duration,parameters -->
+        <!-- async function -->
+      <script>
+        setTimeout(function () {
+          alert("this is executed after 3000ms");
+        }, 3000);
+        console.log("hello");
+        setTimeout(
+          function (name) {
+            alert("hello" + name);
+          },
+          3000,
+          "mj"
+        );
+        console.log("hello");
+        
+      </script>
+    </h1>
+  </body>
+</html>

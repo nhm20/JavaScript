@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 32;
+      var b = 2;
+      document.write(a + b);
+      document.write("<br>");
+      a = "32";
+      b = 2;
+      document.write(a + b);
+      document.write("<br>");
+      a = "8";
+      b = "script";
+      document.write(a + b);
+      document.write("<br>");
+
+      var a = 32;
+      var b = 2;
+      var c = "script";
+      document.write(a + b + c); //associativity-same sign left or right
+      document.write("<br>"); //precedence-multiple signs
+
+      document.write(c + a + b);
+      document.write("<br>");
+
+      document.write(b++);
+      document.write("<br>");
+      document.write(b--);
+      document.write("<br>");
+      document.write(--b);
+      document.write("<br>");
+    </script>
+  </body>
+</html>

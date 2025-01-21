@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #special {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+      #sp {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="special">
+     <!-- onClick is event listner -->
+      Name:<input id="sp" type="text" /><br /><br />
+      <!-- <button id="b1" onclick="document.body.style.backgroundColor='green'">Change background</button> -->
+      <button id="b1" onclick="change();">Change background</button>
+      <script>
+        function change() {
+          var letters = "012345678ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            var r = Math.floor(Math.random() * 16);
+            color = color + letters[r];
+          }
+          document.body.style.backgroundColor = color;
+        }
+      </script>
+    </div>
+  </body>
+</html>

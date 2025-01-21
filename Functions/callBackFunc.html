@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          // call back function is a function that is passing 
+          // as an argument to another function
+          function test(a){
+               console.log(a);
+               a();
+          }
+          test(function(){
+               console.log("call back function");
+          })
+          function first(test){
+               console.log(test);
+               test();
+               console.log("this is first function");
+          }
+          function second(){
+               console.log("this is second function");
+          }
+          first(second);
+     </script>
+</body>
+</html>

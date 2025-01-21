@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b) {
+        console.log(a + b);
+      }
+      function product(a, b) {
+        console.log(a * b);
+      }
+      function calculator(val1, val2, operation) {
+        operation(val1, val2);
+      }
+      calculator(3, 4, product);
+      calculator(3, 3, add);
+
+      var arr = [2, 4, 5, 3];
+      var res = arr.map(function (ele, ind, arr) {
+        return ele * ele;
+      });
+      console.log(res);
+    </script>
+  </body>
+</html>

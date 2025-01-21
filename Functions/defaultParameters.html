@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function product(n1, n2 = 9) {
+        console.log(n1, n2, n1 * n2);
+      }
+      product(3, 3);
+      product(3);
+
+      // rest parameter
+      function prod(n1 = 1, n2, ...rest) {
+        //rest is in array form
+        console.log(arguments); //arguments is pased as default parameter in func
+        console.log(arguments[0]);
+        console.log(arguments.length);
+
+        var res = n1 * n2;
+        for (num of rest) {
+          res = num * res;
+        }
+        console.log(res);
+      }
+      prod(4, 4, 4, 4, 4, 4);
+    </script>
+  </body>
+</html>

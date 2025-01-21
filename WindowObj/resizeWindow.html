@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>this is main window</h1>
+      <button onclick="openWindow()">open a window</button>
+      <br /><br />
+      <button onclick="closeWindow()">close a window</button>
+      <br /><br />
+      <button onclick="moveToWindow()">move a window</button>
+      <br /><br />
+      <button onclick="moveByWindow()">move a window</button>
+      <br /><br />
+      <button onclick="resizeToWindow()">resize To window</button>
+      <br /><br />
+      <button onclick="resizeByWindow()">resize By window</button>
+    </div>
+    <script>
+      var ref;
+      function openWindow() {
+        ref = window.open(
+          "child.html",
+          "_blank",
+          "width=400px,height=200px,left=600px,top=300px"
+        );
+      }
+      function closeWindow() {
+        ref.close();
+      }
+      function moveToWindow() {
+        ref.moveTo(800, 100);
+      }
+      function moveByWindow() {
+        ref.moveBy(200, -200);
+      }
+      function resizeToWindow() {
+        ref.resizeTo(800, 400);
+      }
+      function resizeByWindow() {
+        ref.resizeBy(100, 200);
+      }
+    </script>
+  </body>
+</html>

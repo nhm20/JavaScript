@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>   
+     //name:"RRR" is element or property
+     //alphabet order
+          let movie={name:"RRR",release:2021,director:"Rajamouli"};
+          let name="name";
+          console.log(movie["name"]);
+          // console.log(movie[release]);   error
+          console.log(movie.name); 
+          movie.budget="2222cr";
+          // movie[budget]="3333cr";   error
+          movie["budget"]="3333cr";  
+          console.log(movie);
+          movie["name"]="bahubali";
+          console.log(movie);
+          let movie1=new Object();
+          movie["name"]="bahubali";
+          console.log(movie);   
+     </script>
+</body>
+</html>

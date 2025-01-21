@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // arrow function
+      add = (n1, n2) => {
+        //arrow symbol
+        var result = n2 + n1;
+        return result;
+      };
+      document.write(add(3, 5));
+
+      product = (n1, n2) => {
+        var result = n2 * n1;
+        document.write(result);
+      };
+      product(3, 5);
+
+      add = (n1, n2) => n2 + n1;
+      document.write(add(3, 5));
+
+      add = (n1) => n1 * n1 * n1;
+      document.write(add(4));
+
+      add = (n1) => n1 * n1 * n1;
+      document.write(add(4));
+
+      add = (n1) => {
+        return n1 * n1 * n1;
+      };
+      document.write(add(4));
+
+      add = () => document.write("hello world");
+      add();
+
+      add = _ => document.write("hello world");
+      add();
+      
+      add = (_) => {
+        document.write("hello world");
+        document.write("hello whr");
+        return "hewllo";
+      };
+
+      var res = add();
+      document.write(res());
+    </script>
+  </body>
+</html>

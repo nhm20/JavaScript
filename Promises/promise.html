@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          // let p=new Promise(
+               // executive function
+          //      function(success,error){
+          //           let datacame=true
+          //           if(datacame){
+          //                success("promise done")
+          //           }
+          //           else{
+          //                error("promise not done")
+          //           }
+          //      }
+          // )
+          // console.log(p)
+          let p=new Promise(
+               function(success,error){
+                    let datacame=false
+                    if(datacame){
+                         success([1,2,3,4,5])
+                    }
+                    else{
+                         error("promise not done")
+                    }
+               }
+          )
+
+          // console.log(p)
+          // if data is false
+          p.then(function(data){
+               console.log(data);
+          })
+          // if data is false
+          p.catch(function(errordata){
+               console.log(errordata)
+          })
+          
+     </script>
+</body>
+</html>

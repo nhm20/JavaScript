@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Variables
+    <script>
+      console.log(num3);
+      let num = 20;
+      console.log(num);
+      document.write(num);
+
+      const num2 = 30;
+      document.write(num2);
+      x = 10;
+      document.write(x);
+
+      document.write(num3);
+      let num3; //hoisting is not possible with let
+      //variable with same name can be declared only once
+
+      {
+        let y = 10;
+        document.write(y);
+      }
+      document.write(y);
+      // let and const follow block level scope
+    </script>
+  </body>
+</html>

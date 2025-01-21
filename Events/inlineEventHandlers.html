@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          #special{
+               position: absolute;
+               top:40%;
+               left:40%;
+          }
+          #sp{
+               height:30px;
+          }
+     </style>
+</head>
+<body>
+<body >
+     <div id="special">
+          Name:<input id="sp" type="text"/><br><br>
+          <button id="b1" onclick="document.body.style.backgroundColor='yellow'">Change background</button>
+          <button id="b" onclick="change()">Change background</button>
+          <script>
+               function change(){
+                    document.body.style.backgroundColor='orange';
+               }
+          </script>
+     </div>
+</body>
+</html>

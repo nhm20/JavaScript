@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function step1(next_task){
+      //      setTimeout(()=>{
+      //           console.log("step1 done")
+      //           next_task()
+      //      },2000)
+      // }
+      // function step2(){
+      //      console.log("step2 done")
+      // }
+      // step1(step2)
+
+      function step1(next_task) {
+        setTimeout(() => {
+          console.log("step1 done");
+          setTimeout(() => {
+            console.log("step2 done");
+            setTimeout(() => {
+              console.log("step3 done");
+              setTimeout(() => {
+                console.log("step4 done");
+                setTimeout(() => {
+                  console.log("step5 done");
+                }, 1000);
+              }, 1000);
+            }, 2000);
+          }, 2000);
+        }, 2000);
+      }
+      step1();
+    </script>
+  </body>
+</html>

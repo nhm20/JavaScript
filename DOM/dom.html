@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="first">
+     <h2>this is heading</h2>
+     <p>this is paragraph</p>
+     </div>
+     <div id="first">
+     <h2>this is heading</h2>
+     <p>this is paragraph</p>
+     </div>
+     <div class="second">
+     <h2>this is heading</h2>
+     <p>this is paragraph</p>
+     </div>
+     <div class="second">
+     <h2>this is heading</h2>
+     <p>this is paragraph</p>
+     </div>
+          <script>
+               let x=document.getElementById("first");  //return the first id that matches if >1
+               console.log(x);
+               let y=document.getElementsByClassName("second");  //return list if >1
+               console.log(y);
+               let z=document.getElementsByTagName("h2");    //return list if >1
+               console.log(z);
+               let a=document.querySelector("#first"); //return list if >1
+               console.log(a);
+               let b=document.querySelector(".second");   //return first if >1
+               console.log(b);
+               let c=document.querySelector("p");
+               console.log(c);
+               let d=document.querySelectorAll("p");
+               console.log(d);
+
+ //doc pro
+               console.log(document);
+               console.log(document.body);
+               console.log(document.links);
+               console.log(document.title);
+               console.log(document.head);
+               console.log(document.anchors);
+               console.log(document.forms);
+               console.log(document.images);
+               console.log(document.scripts);
+          </script>
+</body>
+</html>
