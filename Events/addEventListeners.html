@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-     <style>
-          #special{
-               position: absolute;
-               top:40%;
-               left:40%;
-          }
-          #sp{
-               height:30px;
-          }
-     </style>
-</head>
-<body>
-<body >
-     <div id="special">
-          Name:<input id="fullname" type="text"/><br><br>
-          <button id="b1" >Change background</button>
-          <script>
-               let btn=document.getElementById("b1");
-               btn.addEventListener('click',function(){
-                    document.body.style.backgroundColor='orange';
-               })
-               btn.addEventListener('click',change)
-               function change(){
-                    document.body.style.backgroundColor='orange';
-               }
-               let fn=document.getElementById("fullname");
-               fn.addEventListener('focus',change1)
-               function change1(){
-                    console.log(this);
-                    fn.style.backgroundColor='pink';
-               }
-               function change1(evntObj){
-                    console.log(evntObj);
-                    fn.style.backgroundColor='pink';
-               }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #special {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+      }
+      #fullname {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="special">
+      <label for="fullname">Name:</label>
+      <input id="fullname" type="text" placeholder="Enter your name" /><br /><br />
+      <button id="b1">Change background</button>
+    </div>
 
-               let fn1=document.getElementById("fullname");
-               fn1.addEventListener('keyup',change2)
-               function change2(evntObj){
-                    console.log(evntObj);
-                    if(evntObj.key=='a'){
-                         alert("a is not allowed");
-                    }
-                    fn1.style.backgroundColor='pink';
-               }
-          </script>
-     </div>
-</body>
+    <script>
+      let btn = document.getElementById("b1");
+      btn.addEventListener("click", change);
+
+      function change() {
+        document.body.style.backgroundColor = "orange";
+      }
+
+      let fn = document.getElementById("fullname");
+      fn.addEventListener("focus", change1);
+      fn.addEventListener("keyup", change2);
+
+      function change1(evntObj) {
+          console.log(this);
+        console.log(evntObj);
+        this.style.backgroundColor = "pink";
+      }
+
+      function change2(evntObj) {
+        console.log(evntObj);
+        if (evntObj.key === "a") {
+          alert("a is not allowed");
+        } else {
+          this.style.backgroundColor = "lightblue"; // Change color only if 'a' is NOT pressed
+        }
+      }
+    </script>
+  </body>
 </html>

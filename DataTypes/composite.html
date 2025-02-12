@@ -8,25 +8,23 @@
   <body>
     Composite
     <script>
-      document.write("Arrays");
+      console.log("Arrays");
       let num = [33, 34, 245];
-      document.write(num);
-      document.write(typeof num);
+      console.log(num);
+      console.log(typeof num);
 
       num = [34, "xyz", true, null, undefined];
-      document.write(num);
+      console.log(num);
 
-      document.write("Objects");
-      names = {
-        //any
+      console.log("Objects");
+      let names = {
         name: "xyz",
         age: 34,
         land: null,
       };
       console.log(names);
-      document.write(names);
 
-      let names = [
+      names = [
         {
           name: "xyz",
           age: 34,
@@ -44,8 +42,7 @@
         },
       ];
       console.log(names);
-      document.write(names);
-      console.log(names[0])
+      console.log(names[0]);
     </script>
   </body>
 </html>

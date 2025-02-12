@@ -7,18 +7,20 @@
 </head>
 <body>
      <script>
-          var fruits=['mango','apple','banana','kiwi'];
-          for (x in fruits ) {
-               document.write(x+"  ");     
+          var fruits = ['mango', 'apple', 'banana', 'kiwi'];
+          
+          for (x in fruits) {
+               console.log(x + "  ");     
           }
-          for (x in fruits ) {
-               document.write(x +" "+ fruits[x] +"<br>");     
+          
+          for (x in fruits) {
+               console.log(x + " " + fruits[x]);     
           }
-          document.write(fruits);
-          document.write("\n");
+          
+          console.log(fruits);
 
           for (let i = 0; i < fruits.length; i++) {
-               document.write(fruits[i] +"<br>");
+               console.log(fruits[i]);
           }
 
      </script>

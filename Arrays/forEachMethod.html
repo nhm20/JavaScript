@@ -27,24 +27,21 @@
 
       console.log(salaries);
       salaries.forEach((salary, index, arr) => {
-        let increment = salary / 10;
-        salaries[index] = salary + increment;
+        salaries[index] = salary + 1000;
       });
       console.log(salaries);
 
       var salaries = [3000, 5000, 4000];
       console.log(salaries);
       salaries.forEach(function (salary, index, arr) {
-        let increment = salary / 10;
-        salaries[index] = salary + increment;
+        salaries[index] = salary + 500;
       });
       console.log(salaries);
 
       var salaries = [3000, 5000, 4000];
       console.log(salaries);
       salaries.forEach(function incremet(salary, index, arr) {
-        let increment = salary / 10;
-        salaries[index] = salary + increment;
+        salaries[index] = salary + 50;
       });
       console.log(salaries);
 
@@ -52,9 +49,7 @@
       console.log(salaries);
       salaries.forEach(incremet);
       function incremet(salary, index, arr) {
-        console.log(salary);
-        let increment = salary / 10;
-        salaries[index] = salary + increment;
+        salaries[index] = salary + 10;
       }
       console.log(salaries);
     </script>

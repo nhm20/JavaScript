@@ -24,12 +24,15 @@
     <script>
       var x = document.getElementById("special");
       x.setAttribute("class", "two"); // setAttribute adds but removes the prev style
+      console.log(x.classList);
       x.classList.add("one");
       console.log(x.classList);
 
       x.classList.add("three");
       console.log(x.classList);
+
       x.classList.remove("one");
+      console.log(x.classList);
     </script>
   </body>
 </html>

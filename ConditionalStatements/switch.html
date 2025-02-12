@@ -7,21 +7,24 @@
   </head>
   <body>
     <script>
+      // Use parseFloat() instead of unary + for better type conversion.
+      // let n1 = parseFloat(prompt("Enter first number:"));
+
       var n1 = +prompt("enter a number");
       var n2 = +prompt("enter a number");
       var op = prompt("enter a op");
       switch (op) {
         case "+":
-          alert("Selected + Op " + (n1+n2));
+          alert("Selected + Op " + (n1 + n2));
           break;
         case "-":
-          alert("Selected - Op "+ (n1-n2));
+          alert("Selected - Op " + (n1 - n2));
           break;
         case "*":
-          alert("Selected * Op "+ (n1*n2));
+          alert("Selected * Op " + n1 * n2);
           break;
         case "/":
-          alert("Selected / Op "+ (n1/n2));
+          alert("Selected / Op " + n1 / n2);
           break;
         default:
           alert("Nothing Selected ");

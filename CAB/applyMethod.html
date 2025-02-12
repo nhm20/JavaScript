@@ -13,11 +13,10 @@
         console.log(b);
         console.log(a);
       }
-
-      employee = { salary: 30000 };
-      getSalary.call(employee, 43, 54);
+      
       employee2 = { salary: 30000 };
-      getSalary.apply(employee2, [43, 54]);
+      getSalary.apply(employee2, [43, 54]); 
+      //apply is similar to call but the only difference is that the arguments are passed as an array
     </script>
   </body>
 </html>

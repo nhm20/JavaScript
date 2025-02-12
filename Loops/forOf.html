@@ -10,20 +10,16 @@
       var fruits = ["mango", "apple", "banana", "kiwi"];
 
       for (element of fruits) {
-        document.write(element + "  ");
+        console.log(element);
       }
-      document.write("<br>");
       var students = { 1: "amn", 32: "gf", 45: "deh" };
-     //  for (element of students ) {                 error
-     //       document.write(students +"<br>");
-     //  }
-      for (key in students) {
-        document.write(key + "   >>    " + students[key] + "<br>");
+      for (element in students) {
+        console.log(element + " : " + students[element]);
       }
 
       var str = "india";
       for (i in str) {
-        document.write(i + "   >>    " + str[i] + "<br>");
+        console.log(i + " : " + str[i]);
       }
     </script>
   </body>

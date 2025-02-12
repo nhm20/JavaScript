@@ -6,8 +6,6 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="button" onclick="updatecount()" value="click" />
-    <p id="count">clicked:0</p>
     <script>
       function outer(num1) {
         function inner(num2) {
@@ -18,14 +16,14 @@
       var res = outer(7);
       res(8);
 
-      function outer(num1) {
+      function outer2(num1) {
         var x = 10;
         function inner(num2) {
           console.log(num1 + num2 + x);
         }
         return inner;
       }
-      var res = outer(7);
+      var res = outer2(7);
       res(8);
     </script>
   </body>

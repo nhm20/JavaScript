@@ -1,1 +1,2 @@
 this is text from test file
+this is used for ajax

@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     
-     <script>
-          //spread operator(...) takes an iterable and expands or 
-     //separate each element of itearable
-     var arr=[3,33,45,23,324];
-     console.log(arr);
-     console.log(...arr);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //spread operator(...) takes an iterable and expands or
+      //separate each element of itearable
+      var arr = [3, 33, 45, 23, 324];
+      console.log(arr);
+      console.log(...arr);
 
-     var arr2=[1,11,...arr];
-     console.log(arr2);
-     var s1="java";
-     console.log(...s1);
-     console.log(s1);  
+      var arr3 = [arr, 34, 23, 23, 23];
+      console.log(arr3)
+      var arr2 = [1, 11, ...arr];
+      console.log(arr2);
+      var s1 = "java";
+      console.log(...s1);
+      console.log(s1);
 
-     var a1=[2,1,1,3];
-     var a2=[3,54,35];
-     var a3=[...a1,,43,32,...a2];
-     console.log(a3);
+      var a1 = [2, 1, 1,45,54];
+      var a2 = [3, 54, 35];
+      var a3 = [...a1, 43, 32, ...a2];
+      console.log(a3);
 
-     function add(a,b,c,d){
-          console.log(a+b+c+d);
-     }
-     add(...a1);
-     </script>
-</body>
+      function add(a, b, c, d) {
+        console.log(a + b + c + d);
+      }
+      add(...a1);
+    </script>
+  </body>
 </html>

@@ -8,61 +8,28 @@
   <body>
     <!-- js strings are immutable -->
     <script>
-      //   let x='java script' //primitive data type
-      //   var y=new String("html") //object
-      //   console.log(x)  //console.log(new String(x))
-      //   console.log(y)
+        let x='java script' //primitive data type
+        var y=new String("html") //object
+        console.log(x)  //console.log(new String(x)) 
+        console.log(y) //temporarily converted to string object
 
-      //   console.log(x.charAt('3'))
-      //   console.log(x.indexOf('a'))
-      //   console.log(x.indexOf('script'))
-      //   console.log(x.indexOf('scrkpt'))
-      //   console.log(x.lastIndexOf('a'))
+        console.log(x.charAt('3'))
+        console.log(x.indexOf('a'))
+        console.log(x.indexOf('script'))
+        console.log(x.indexOf('scrkpt'))
+        console.log(x.lastIndexOf('a'))
 
-      // console.log(x.toUpperCase())
-      // console.log(x)
+      console.log(x.toUpperCase())
+      console.log(x)
 
-      // console.log(x.toLowerCase())
+      console.log(x.toLowerCase())
 
-      // let y="language"
-      // console.log(x.concat(y))
-      // let z="front end"
-      // console.log(x.concat(y,z))
+      var y="language"
+      console.log(x.concat(y))
+      let z="front end"
+      console.log(x.concat(y,z))
 
-      // properties
-      let x = "  java script       ";
-      let y = "html";
-      console.log(x.length);
-      console.log(x.trim(), y);
-
-      console.log(x.split("a"));
-
-      console.log(x.startsWith("j"));
-
-      console.log(x.endsWith("y"));
-      console.log(x.slice(2, 6));
-      x = "java script";
-      console.log(x.slice(2));
-      console.log(x.slice(-1));
-      console.log(x.slice(-3));
-      console.log(x.slice(-3, -1));
-
-      console.log(x.substring(4, 7));
-      console.log(x.substr(4, 2));
-      console.log(x.substring(-4, -1));
-      console.log(x.includes("cript"));
-      console.log(x.includes("cript", 4));
-
-      console.log(x.charCodeAt(3));
-      console.log(x.repeat());
-      console.log(x.repeat(2));
-
-      x = "java script va";
-      console.log(x.replace("java", "papa"));
-      console.log(x.replace("jva", "papa"));
-      console.log(x.replace("va", "papa"));
-
-      console.log(x.replace(/va/g, "fava"));
+      
     </script>
   </body>
 </html>

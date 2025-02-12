@@ -17,13 +17,14 @@
   </head>
   <body>
     <div id="special">
-     <!-- onClick is event listner -->
-      Name:<input id="sp" type="text" /><br /><br />
-      <!-- <button id="b1" onclick="document.body.style.backgroundColor='green'">Change background</button> -->
-      <button id="b1" onclick="change();">Change background</button>
+      <!-- onClick is event listner -->
+      <label for="sp">Name:</label>
+      <input id="sp" type="text" placeholder="Enter your name" title="Name" /><br /><br />
+      <button id="b1" onclick="document.body.style.backgroundColor='green'">Change background</button>
+      <button id="b2" onclick="change();">Change background</button>
       <script>
         function change() {
-          var letters = "012345678ABCDEF";
+          var letters = "0123456789ABCDEF";
           var color = "#";
           for (var i = 0; i < 6; i++) {
             var r = Math.floor(Math.random() * 16);

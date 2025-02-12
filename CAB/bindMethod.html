@@ -14,13 +14,10 @@
         console.log(b);
       }
 
-      employee = { salary: 30000 };
-      getSalary.call(employee, 43, 54);
-      employee2 = { salary: 50000 };
-      getSalary.apply(employee2, [43, 54]);
       employee3 = { salary: 80000 };
-      var f1 = getSalary.bind(employee3, 4, 69);
-      f1();
+      var fun = getSalary.bind(employee3, 4, 69);
+      fun();
+      //bind is similar to call but the only difference is that it returns a function
     </script>
   </body>
 </html>

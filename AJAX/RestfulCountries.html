@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Info</title>
+  </head>
+  <body>
+    <label for="country">Country:</label>
+    <input type="text" id="country" placeholder="Enter country" />
+
+    <input type="submit" class="button" id="special" value="Get Data" />
+    <div id="data"></div>
+
+    <script>
+      let btn = document.getElementById("special");
+      let dataele = document.getElementById("data");
+
+      btn.addEventListener("click", loadData);
+
+      function loadData() {
+        let cname = document.getElementById("country").value.trim();
+        if (!cname) {
+          dataele.innerHTML = "Please enter a country name.";
+          return;
+        }
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `https://restcountries.com/v3.1/name/${cname}`, true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            let result = JSON.parse(xhr.responseText);
+            console.log(result);
+            if (result.length > 0) {
+              let country = result[0];
+              dataele.innerHTML = `
+                <h2>${country.name.common}</h2>
+                <img src="${country.flags.png}" alt="flag" width="400px" height="400px">
+              `;
+            } else {
+              dataele.innerHTML = "No country found.";
+            }
+          } else {
+            dataele.innerHTML = "Invalid Request";
+          }
+        };
+
+        xhr.onerror = function () {
+          dataele.innerHTML = "Error fetching data.";
+        };
+
+        xhr.onprogress = function () {
+          dataele.innerHTML = "Fetching data...";
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>

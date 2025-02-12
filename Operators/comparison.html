@@ -7,21 +7,18 @@
 </head>
 <body>
      <script>
-          var a=32;
-          var b=2;
-          document.write(a!=b);
-          document.write("<br>");  
-          a="32";
-          b=32;
-          document.write(a==b);
-          document.write("<br>"); 
-          document.write(a!=b);
-          document.write("<br>"); 
-          a="32";
-          b=32;
-          document.write(a===b);      //strict equal to operator
+          var a = 32;
+          var b = 2;
+          console.log(a != b); 
+          a = "32";
+          b = 32;
+          console.log(a == b);
+          console.log(a != b);
+          a = "32";
+          b = 32;
+          console.log(a === b);      //strict equal to operator
 
-          document.write(a/'0'); 
+          console.log(a / '0'); 
           // "",0 are false
      </script>
 </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // properties
+      let x = "  java script       ";
+      let y = "html";
+      console.log(x.length);
+      console.log(x.trim(), y);
+
+      console.log(x.split("a"));
+
+      console.log(x.startsWith("j"));
+
+      console.log(x.endsWith("y"));
+      console.log(x.slice(2, 6));
+      x = "java script";
+      console.log(x.slice(2));
+      console.log(x.slice(-1));
+      console.log(x.slice(-3));
+      console.log(x.slice(-3, -1));
+
+      console.log(x.substring(1, 3));
+      console.log(x.substr(1, 3));
+      
+      console.log(x.substring(-4, -1)); //substring does not accept negative values
+      console.log(x.includes("cript"));
+      console.log(x.includes("cript", 4));
+
+      console.log(x.charCodeAt(3));
+      console.log(x.repeat());   //0 times
+      console.log(x.repeat(2));
+
+      x = "java script va";
+      console.log(x.replace("java", "papa"));
+      console.log(x.replace("jva", "papa"));
+      console.log(x.replace("va", "papa"));
+
+      console.log(x.replace(/va/g, "fava"));
+    </script>
+  </body>
+</html>

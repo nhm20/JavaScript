@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          var a1=[1,2,3,4]
-          function first(){
-               return second;
-               return ()=>{console.log("this is arrow function")}
-               return function(){console.log("this is anonymous function")}
-          }
-          function second(){
-               console.log("this is second function")
-          }
-          let x=first()
-          x()
-          first()()
-
-
-
-     </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a1 = [1, 2, 3, 4];
+      function first() {
+        return second;
+        return () => {
+          console.log("this is arrow function");
+        };
+        return function () {
+          console.log("this is anonymous function");
+        };
+      }
+      function second() {
+        console.log("this is second function");
+      }
+      let x = first();
+      x();
+      first()();
+    </script>
+  </body>
 </html>

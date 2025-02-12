@@ -7,25 +7,23 @@
   </head>
   <body>
     <script>
-      
       // IIFE- Immediately Invoked function expression
-      (function(n1, n2) {
+      (function (n1, n2) {
         var result = n2 + n1;
-        document.writeln(result);
-      })(43, 2);    //these () must
+        console.log(result);
+      })(43, 2); //these () must
 
-     var sum= (function(n1, n2) {
+      var sum = (function (n1, n2) {
         var result = n2 + n1;
-        document.writeln(result);
-      })(43, 2);    
-      document.writeln(sum);
+        return result;
+      })(43, 2);
+      console.log(sum);
 
-     var sum= (function add(n1, n2) {
+      var sum = (function add(n1, n2) {
         var result = n2 + n1;
-        document.writeln(result);
-      })(43, 2);    
-      document.writeln(sum);
-
+        return result;
+      })(43, 2);
+      console.log(sum);
     </script>
   </body>
 </html>

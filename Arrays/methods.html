@@ -7,28 +7,26 @@
   </head>
   <body>
     <script>
-      var movies = ["rrr", "f2", "mi"];
+      let movies = ["rrr", "f2", "mi"];
       movies.push("mohe");
-      document.writeln(movies);
-      document.writeln("<br>");
-
-      document.writeln(movies.pop());
-      document.writeln("<br>");
+      console.log(movies);
+      
+      console.log(movies.pop());
+      
       var name = movies.pop();
-      document.writeln(name);
-      document.writeln("<br>");
-      document.writeln(movies);
+      console.log(name);
+      
+      console.log(movies);
       movies.unshift("maharshi"); //opposite to push, add the element at front
-      document.writeln("<br>");
-      document.writeln(movies);
+      console.log(movies);
+      
       var mov = movies.shift(); //opposite to push, add the element at front
-      document.writeln("<br>");
-      document.writeln(movies);
+      console.log(movies);
 
-      document.writeln("index of archarya" + indexOf("rrr"));     //-1 if its not present
-      var movies = ["rrr", "f2", "mi"];
-      var mov =movies.slice(0, 2);  // 0 to 2-1
-      document.writeln(mov);
+      console.log("index of rrr " + movies.indexOf("rrr")); //-1 if its not present
+      var movies2 = ["rrr", "f2", "mi"];
+      var mov = movies2.slice(0, 2); // 0 to 2-1
+      console.log(mov);
     </script>
   </body>
 </html>

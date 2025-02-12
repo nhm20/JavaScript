@@ -54,15 +54,12 @@ body{
     padding: 10px;
 
 }
-
-
 .field span{
     position: absolute;
     top:30px;
     right: 10px;
     visibility: hidden;
 }
-
 .field small{
     position: absolute;
     bottom: 0px;

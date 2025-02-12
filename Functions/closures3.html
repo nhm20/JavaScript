@@ -14,8 +14,8 @@
       //      count=count+1
       //      let p=document.getElementById("count")
       //      p.innerText=`clicked:${count}`
-      // }   
-      // cnt is not secured as it can be accessed  globally
+      // }
+      // count is not secured as it can be accessed  globally
 
       function updateCountSecure() {
         let count = 0;
@@ -28,10 +28,9 @@
       }
       let updatecount = updateCountSecure();
       let updatecount2 = updateCountSecure();
-     updateCount();
-      updateCount();
+      updatecount();
+      updatecount2();
       console.log(updatecount);
-
     </script>
   </body>
 </html>

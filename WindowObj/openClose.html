@@ -20,13 +20,14 @@
         // ref=window.open("child.html","_blank","width=600px,height=500px,left=100px,top=100px")
         // ref=window.open("child.html","","width=600px,height=500px,left=100px,top=100px")
         ref = window.open(
-          "https://instagram.com",
+          "https://instagram.com",  //this window cannot be closed as it is not opened by the same domain
           "_blank",
           "width=600px,height=500px,left=100px,top=100px"
         );
       }
+      console.log(window.closed)
       function closeWindow() {
-        ref.close();
+        ref.close();               
       }
     </script>
   </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let d2 = new Date(10000);
+      console.log("d2: " +d2);
+      console.log("getTime: "+ d2.getTime());
+
+      let d1 = new Date();
+      console.log(d1);
+      console.log(d1.getFullYear());
+      console.log(d1.getMonth());
+
+      let months = ["jan", "feb", "mar", "apr"];
+      console.log(months[d1.getMonth()]);
+      console.log(d1.getDate());
+      let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+      console.log(days[d1.getDay()]);
+
+      d1.setFullYear(2023);
+      console.log(d1.getFullYear());
+      d1.setMonth(1);
+
+      console.log(months[d1.getMonth()]);
+      d1.setDate(1);
+      console.log(d1.getDate());
+      console.log(days[d1.getDay()]);
+    </script>
+  </body>
+</html>

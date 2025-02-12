@@ -13,42 +13,39 @@
         var result = n2 + n1;
         return result;
       };
-      document.write(add(3, 5));
+      console.log(add(3, 5));
 
       product = (n1, n2) => {
         var result = n2 * n1;
-        document.write(result);
+        console.log(result);
       };
       product(3, 5);
 
       add = (n1, n2) => n2 + n1;
-      document.write(add(3, 5));
+      console.log(add(3, 5));
 
       add = (n1) => n1 * n1 * n1;
-      document.write(add(4));
+      console.log(add(4));
 
-      add = (n1) => n1 * n1 * n1;
-      document.write(add(4));
-
-      add = (n1) => {
+      add = (n1) => { 
         return n1 * n1 * n1;
       };
-      document.write(add(4));
+      console.log(add(4));
 
-      add = () => document.write("hello world");
+      add = () => console.log("hello world");
       add();
 
-      add = _ => document.write("hello world");
+      add = (_) => console.log("hello world");
       add();
-      
-      add = (_) => {
-        document.write("hello world");
-        document.write("hello whr");
+
+      add = _ => {
+        console.log("hello world");
+        console.log("hello whr");
         return "hewllo";
       };
 
       var res = add();
-      document.write(res());
+      console.log(res);
     </script>
   </body>
 </html>

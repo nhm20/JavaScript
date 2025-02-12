@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="submit" class="button" id="special" value="Get Data" />
+    <div id="data"></div>
+    <script>
+      let btn = document.getElementById("special");
+      let dataele = document.getElementById("data");
+      btn.addEventListener("click", loadData);
+
+      function loadData() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "country.json", true);
+        xhr.send();
+        xhr.onload = function () {
+          if (xhr.status == 200) {
+            let result = xhr.responseText;
+            result = JSON.parse(result);
+            console.log(result);
+
+            let str = `<table border="2"><tr>`;
+            for (let key in result[0]) {
+              str += `<th>${key}</th>`;
+            }
+            str += `</tr>`;
+            for (let i = 0; i < result.length; i++) {
+              str += `<tr>`;
+              for (let key in result[i]) {
+                str += `<td>${result[i][key]}</td>`;
+              }
+              str += `</tr>`;
+            }
+            str += `</table>`;
+            dataele.innerHTML = str;
+          } else {
+            dataele.innerHTML = "File Not found";
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

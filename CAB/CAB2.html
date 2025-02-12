@@ -11,20 +11,17 @@
         salary: 20000,
         getSalary: function (a, b) {
           console.log(this.salary);
-          console.log(a);
-          console.log(b);
+          console.log(a, b);
+        },
+        greet: function (wish) {
+          console.log(this.name, wish);
         },
       };
-      myObj.getSalary(3, 24);
-
-      employee = { salary: 30000 };
-      myObj.getSalary.call(employee, 4, 69);
-      myObj.getSalary.apply(employee, [4, 69]);
-      var f1 = myObj.getSalary.bind(employee, 4, 69);
-      f1();
-      var f1 = myObj.getSalary.bind(employee);
-      f1(3, 6);
-
+      employee3 = { salary: 80000, name: "xyz" };
+      var f1 = myObj.greet.bind(employee3);
+      f1("good noon");
+      f1("good evening");
+      console.log(f1);
     </script>
   </body>
 </html>

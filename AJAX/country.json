@@ -1,0 +1,37 @@
+[
+     {
+     "name":"INDIA",
+      "capital":"New Delhi",
+      "Prime Minister":"Narendra Modi"
+     },
+     {
+     "name":"UK",
+      "capital":"London",
+      "Prime Minister":"Boris Johnson"
+     },
+     {
+     "name":"NEPAL",
+      "capital":"Kathmandu",
+      "Prime Minister":"Sher Bahadur Deuba"
+     },
+     {
+     "name":"AUSTRALIA",
+      "capital":"Canberra",
+      "Prime Minister":"Scott Morrison"
+     },
+     {
+     "name":"CANADA",
+      "capital":"Ottawa",
+      "Prime Minister":"Justin Trudeau"
+     },
+     {
+     "name":"ITALY",
+      "capital":"Rome",
+      "Prime Minister":"Mario Draghi"
+     },
+     {
+     "name":"JAPAN",
+      "capital":"Tokyo",
+      "Prime Minister":"Yoshihide Suga"
+     }
+]

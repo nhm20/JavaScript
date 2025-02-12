@@ -9,28 +9,25 @@
     <p id="one">this is paragraph</p>
     <script>
       let employee = {
-        id: 131,
         email: "xhe@dmail.com",
-        personalInfo: {
+        details: {
           name: "xyz",
           mobile: 3222332223,
           address: {
-            line1: "near unimall",
-            line2: "lpu",
             city: "jalandar",
             state: "telangana",
           },
         },
       };
-      // console.log(employee.personallInfo?.mobile)
-      // console.log(employee.personalInfo?.address?.pincode?.one)
-      // console.log("hello")
+      console.log(employee.details?.mobile)
+      console.log(employee.details.phone)
+      console.log(employee.details?.address?.pincode?.one)
+      console.log("hello")
 
-      // let par=document.getElementById("one").innerHTML
-      // console.log(par)
-      let par = document.getElementById("two")?.innerText;
-      console.log(par);
-      console.log("hello");
+      let par=document.getElementById("one").innerHTML
+      console.log(par)
+      let par2 = document.getElementById("two")?.innerText;
+      console.log(par2);
     </script>
   </body>
 </html>
