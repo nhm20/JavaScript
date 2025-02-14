@@ -23,16 +23,19 @@
             } else {
               reject("no data found");
             }
-          }
-        })
-        p.then(function (data) {
-          console.log(data);
-        },function (errordata) {
-          console.log(errordata);
+          };
         });
-     //    p.catch(function (errordata) {
-     //      console.log(errordata);
-     //    });
+        p.then(
+          function (data) {
+            console.log(data);
+          },
+          function (errordata) {
+            console.log(errordata);
+          }
+        );
+        // p.catch(function (errordata) {
+        //   console.log(errordata);
+        // });
       };
     </script>
   </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //async await are used to handle promises in a more elegant way
+      //async await is a syntactic sugar over promises
+      async function test() {
+        x = 5 + 7;
+        return x;
+      }
+      let res = test();
+      res.then(function (data) {
+        console.log(data);
+      });
+
+      async function test2() {
+        x = (await 5) + 7; //error if async is not used
+        console.log("inside function");
+        return x;
+      }
+      let res1 = test2();
+      console.log("outside function");
+      console.log(res1);
+
+      // res1.then(function (data) {
+      //   console.log(data);
+      // });
+    </script>
+  </body>
+</html>

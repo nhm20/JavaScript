@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let p = fetch("https://restcountries.com/v3.1/name/india");
+      //  console.log(p);
+      p.then(function (response) {
+        //    console.log(response);
+        //    console.log(response.json())      // this will return a promise
+        response.json().then(function (countryinfo) {
+          //.json() will convert the response into json format
+          console.log(countryinfo);
+        });
+      });
+      p.catch(function (error) {
+        console.log(error);
+        console.log("error");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          let reg=/he.llo/
+          console.log(reg.test("javascript he4llo"))
+          console.log(reg.test("javascript he\nllo"))
+
+          
+           reg=/\d/ //[0-9]
+          console.log(reg.test("javascript he4llo"))
+          console.log(reg.test("javascript he\nllo"))
+          
+           reg=/\D/ //[0-9] not 
+          console.log(reg.test("javascript he4llo"))
+          console.log(reg.test("javascript he\nllo"))
+          
+          reg=/\w/ //[0-9a-zA-Z_] 
+          console.log(reg.test("javascript he_4llo"))
+          console.log(reg.test("javascript he\nllo"))
+          
+          reg=/\./ //. include 
+          console.log(reg.test("javascript he.llo"))
+
+          reg=/s\+/ //. include 
+          console.log(reg.test("es+elo"))
+
+          reg=/s\*/ //. include 
+          console.log(reg.test("es*elo"))
+
+          reg=/hello\sjs/ //space include 
+          console.log(reg.test("hellojs")) 
+          console.log(reg.test("hello js"))
+
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+        console.log("line1");
+        console.log(line2);
+        console.log("line3");
+      } catch (error) {
+        console.log(error);
+        // console.log(error.type)
+        // console.log(error.name)
+        console.log(error.message);
+      }
+      console.log("outside try catch");
+
+      let x = 15;
+      console.log("line1");
+      if (x < 20) {
+        throw "x must be greater than 20";                    //if we throw an error, the code after the throw statement will not be executed
+        console.log("provide another number");
+      }
+      console.log("hello");
+    </script>
+  </body>
+</html>

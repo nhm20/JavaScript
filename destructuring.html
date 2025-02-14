@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          let arr=[100,200,300,400];
+          let person={
+               name:"xyz",
+               age:26,
+               address:{
+                    city:"bangalore",
+                    state:"Karnataka"
+               }
+          }
+          // let a=arr[0]
+          // let b=arr[1]
+          // let c=arr[2]
+          
+          // let [a,,c]=arr
+          // console.log(a,c)
+
+          // let [a,...c]=arr
+          // console.log(a,c)
+
+          // console.log(person.address.city)
+
+          // name=person.name
+          //  let {name,age,address:{city},nam="test"}=person
+          //  console.log(name)
+          //  console.log(age)
+          //  console.log(city)
+          //  console.log(nam)
+
+           let {name:nam,age,address:{city}}=person
+           
+           console.log(nam)
+     </script>
+</body>
+</html>

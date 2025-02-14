@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, phone) {
+          this.name = name;
+
+          this.mobile_no = phone;
+        }
+        getPersonalDetails() {
+          console.log("name:", this.name, "\n mobile:", this.mobile_no);
+        }
+      }
+      let p1 = new Person("xyz", 434367657);
+      console.log(p1);
+
+      class Employee extends Person {
+        constructor(n, m, s, c) {
+          super(n, m);
+          this.salary = s;
+          this.company = c;
+        }
+
+        getOfficeDetails(){
+          console.log("salary:",this.salary,"\n company:",this.mobile_no)
+        }
+      }
+
+      let e1 = new Employee("abc", 5445454, 300000, "Amazon");
+      console.log(e1);
+
+      console.log(e1.getPersonalDetails());
+      console.log(e1.getOfficeDetails());
+    </script>
+  </body>
+</html>

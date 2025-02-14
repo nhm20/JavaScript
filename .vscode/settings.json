@@ -1,0 +1,6 @@
+{
+  "editor.suggest.showStatusBar": true,
+  "diffEditor.hideUnchangedRegions.enabled": false,
+  "zenMode.hideStatusBar": true,
+  "accessibility.hideAccessibleView": false
+}

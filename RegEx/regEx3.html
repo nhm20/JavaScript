@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          let re=/[a435]/
+          let res=re.test("3ghr")
+          console.log(res)
+
+          re=/[^a43]/
+          res=re.test("at")
+          console.log(res)
+          res=re.test("a343")
+          console.log(res)
+
+          re=/[0-9]/
+          res=re.test("09a")
+          console.log(res)
+
+          re=/[a-c]/
+          res=re.test("rr3")
+          console.log(res)
+
+          re=/[A-B]/
+          res=re.test("09")
+          console.log(res)
+
+
+     </script>
+</body>
+</html>

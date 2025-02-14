@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // async function test(){
+      //      let res=fetch("test.txt")
+      //      res.then(function(response){
+      //           response.text().then(function(data){
+      //                console.log(data)
+      //           })
+      //      })
+      // }
+      async function test() {
+        console.log("inside function");
+        let res = await fetch("test.txt");  //await is used to wait for the promise to resolve
+        console.log("inside function stmt2");
+        let finalRes = await res.text();  //await is used to wait for the promise to resolve
+        console.log(finalRes);
+      }
+      test();
+      console.log("outside function");
+    </script>
+  </body>
+</html>
