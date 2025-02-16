@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          let name="xyz";
-          let arr=[2,4,5]
-          let person={name:"abc",age:34}
-          function movie(name,director){
-               this.moviename=name
-               this.director=director
-               this.getDetails=function(){
-               console.log("director of",this.moviename,":",this.director)
-               }
-          }  
-          console.log(movie.prototype)
-          movie.prototype.sayHello=function(){
-               console.log("hello",this.director,this.moviename)
-          }  
-          movie1=new movie("pushpa","sukumar")
-          movie2=new movie("rrr","rajamouli")
-          //prototype=related to function
-          // __proto__=object related
-
-          let id=getElementById("id")
-          
-     </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = "xyz";
+      let arr = [2, 4, 5];
+      let person = { name: "abc", age: 34 };
+      function movie(name, director) {
+        this.moviename = name;
+        this.director = director;
+        this.getDetails = function () {
+          console.log("director of", this.moviename, ":", this.director);
+        };
+      }
+      console.log(movie.prototype);
+      movie.prototype.sayHello = function () {
+        console.log("hello", this.director, this.moviename);
+      };
+      movie1 = new movie("pushpa", "sukumar");
+      movie2 = new movie("rrr", "rajamouli");
+      //prototype=related to function   and also a object
+      // __proto__=object related
+    </script>
+  </body>
 </html>

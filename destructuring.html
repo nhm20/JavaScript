@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          let arr=[100,200,300,400];
-          let person={
-               name:"xyz",
-               age:26,
-               address:{
-                    city:"bangalore",
-                    state:"Karnataka"
-               }
-          }
-          // let a=arr[0]
-          // let b=arr[1]
-          // let c=arr[2]
-          
-          // let [a,,c]=arr
-          // console.log(a,c)
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [100, 200, 300, 400];
 
-          // let [a,...c]=arr
-          // console.log(a,c)
+      let [a, b, c] = arr;
+      console.log(a, b, c);
 
-          // console.log(person.address.city)
+      let [a2, , c2] = arr;
+      console.log(a2, c2);
 
-          // name=person.name
-          //  let {name,age,address:{city},nam="test"}=person
-          //  console.log(name)
-          //  console.log(age)
-          //  console.log(city)
-          //  console.log(nam)
-
-           let {name:nam,age,address:{city}}=person
-           
-           console.log(nam)
-     </script>
-</body>
+      let [a3, ...c3] = arr;
+      console.log(a3, c3);
+      let person = {
+        name: "xyz",
+        age: 26,
+        address: {
+          city: "bangalore",
+          state: "Karnataka",
+        },
+      };
+      let { name, age } = person;
+      console.log(name, age);
+      let {
+        name: personName2,
+        age: personAge,
+        address: { city: personCity },
+      } = person;
+      console.log(personName2);
+      console.log(personAge);
+      console.log(personCity);
+    </script>
+  </body>
 </html>

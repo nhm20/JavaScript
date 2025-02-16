@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          let prevRes={}
-          function sumOfN(n){
-               if(n in prevRes){
-                    return prevRes[n]
-               }
-               else{
-                    let res=0;
-                    for(i=1;i<=n;i++){
-                         res+=i;
-                    }
-                    prevRes[n]=res;
-               }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let prevRes = {};
+      function sumOfN(n) {
+        if (n in prevRes) {
+          return prevRes[n];
+        } else {
+          let res = 0;
+          for (i = 1; i <= n; i++) {
+            res += i;
           }
-          console.time()
-          console.log(sumOfN(1000))
-          console.timeEnd()
-          console.time()
-          console.log(sumOfN(1000))
-          console.timeEnd()
-     </script>
-</body>
+          prevRes[n] = res;
+        }
+      }
+      console.time();
+      console.log(sumOfN(1000));
+      console.timeEnd();
+      console.time();
+      console.log(sumOfN(1000));
+      console.timeEnd();
+    </script>
+  </body>
 </html>

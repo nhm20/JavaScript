@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function impure(a,b){
+           return a*b*Math.random();
+      }
+      console.log(impure(3,2))
+
+      function impure(a,b){
+           a=a+1;
+           return a*b;
+      }
+      console.log(impure(3,2))
+
+      function impure(a,b){
+           console.log("hello") // side effect console.log changes the output
+           return a*b;
+      }
+      console.log(impure(3,2))
+
+      var x=10;
+      function impure(a,b){
+           x++;
+           console.log("hello")
+           return a*b;
+      }
+      console.log(impure(3,2),x)
+
+      function impure(a,b){
+           return Date.now();
+      }
+      console.log(impure(3,2))
+
+     //  impure to pure
+
+      var x=[34,2,5]
+      function impure(arr,num){
+            arr.push(num);
+      }
+      console.log(x)
+      console.log(impure(x,1))
+
+      var x = [34, 2, 5];
+      function pure(arr, num) {
+        var narr = [...arr, num];
+        return narr;
+      }
+      console.log(x);
+      console.log(pure(x, 1));
+      console.log(x);
+      console.log(pure(x, 1));
+    </script>
+  </body>
+</html>

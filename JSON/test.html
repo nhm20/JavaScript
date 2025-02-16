@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function json(){
+          let data= await fetch("test.json")
+          console.log(data)
+          data=await data.json()
+          console.log(data)
+      }
+      // json()
+
+      let s = [
+        {
+          name: "realme",
+          price1: 83000,
+          price: {
+            "4gb": 40000,
+            "6gb": 80000,
+          },
+        },
+        {
+          name: "samsung",
+          price1: 8300,
+          price: {
+            "4gb": 4000,
+            "6gb": 8000,
+          },
+        },
+      ];
+      console.log(s);
+      console.log(JSON.stringify(s));
+    </script>
+  </body>
+</html>

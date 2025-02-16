@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     //sort works only for strings
+      let cities = ["hyd", "ban", "mum", "che", "del"];
+      console.log(cities);
+      cities.sort();
+      console.log(cities);
+
+      // let nums=[12,33,44,22,55,6]
+      // console.log(nums)
+      // nums.sort()
+      // console.log(nums)
+
+      //  let nums=[12,33,44,22,55,6]
+      //  console.log(nums)
+      //  nums.sort(
+      //       (a,b)=>{
+      //            if (a>b) {
+      //                 return 1
+      //            }
+      //            else{
+      //                 return -1
+      //            }
+      //       }
+      //  )
+      //  console.log(nums)
+
+      cities = ["hyd", "ban", "mum", "che", "del"];
+      console.log(cities);
+      cities.sort((a, b) => {
+        if (a < b) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      console.log(cities);
+    </script>
+  </body>
+</html>

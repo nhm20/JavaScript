@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- pure function
+     it has no side effects
+     it is predictable-->
+    <script>
+      function pure(a, b) {
+        return a * b;
+      }
+      console.log(pure(3, 2));
+      //pure function does not depend on any external variable
+      //pure function does not change the value of any external variable
+      //pure functions are predictable and do not have any side effects for same input it will always return same output
+
+      let x = [34, 2, 5];
+      function pure(arr, num) {
+        let narr = [...arr, num];
+        return narr;
+      }
+      console.log(x);
+      console.log(pure(x, 1));
+      console.log(x);
+      console.log(pure(x, 1));
+    </script>
+  </body>
+</html>

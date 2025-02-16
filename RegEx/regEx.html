@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          //  let re=/hello/
-          //  new RegExp("hello")
-          // test()
-          // exec()
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var re = /hello/;
+      //  new RegExp("hello")
+      //  test()  it is used to test the string
+      //  exec();
 
-          // let res=re.test("hello javascript")
-          // console.log(res)
+      var res = re.test("hello javascript");
+      var res2 = re.test("Hello javascript");
+      console.log(res);
+      console.log(res2);
 
-          // i-incase sensitive
-          // let re=/hello/i
-          // let res=re.test("Hello javascript")
-          // console.log(res)
-          
-          // let re=/^[0-9]{10}$/
-          // let res=re.test("7888888888")
-          // console.log(res)
+      // i-case insensitive
+      var re = /hello/i;
+      var res = re.test("Hello javascript");
+      console.log(res);
 
+      var re = /^[0-9]{10}$/;
+      //  ^-start
+      //  [0-9]-range
+      //  {10}-length
+      //      $-end
+      var res = re.test("7888888888");
+      console.log(res);
+      var re = /^[0-9]{10}/;
+      var res = re.test("7888888888ffff");
+      var res2 = re.test("788888888ffff");
+      console.log(res);
+      console.log(res2);
 
-          // let re=/^h/
-          // let res=re.test("hello")
-          // console.log(res)
+      var re=/^h/
+      var res=re.test("hello")
+      console.log(res)
 
-          // let re=/h$/
-          // let res=re.test("hello")
-          // console.log(res)
+      var re=/h$/
+      var res=re.test("hello")
+      console.log(res)
 
-          // let re=new RegExp("hello")
-          // let res=re.test("thello")
-          // console.log(res)
+      var re=new RegExp("hello")
+      var res=re.test("thello")
+      console.log(res)
 
-
-          let x="hello"
-          let re=new RegExp(`{$x}`)
-          // let re=/${x}/
-          let res=re.test("thello")
-          console.log(res)
-          
-     </script>
-</body>
+       var x = "hello";
+       var re = new RegExp(`${x}`);
+       // var re=/${x}/
+       var res = re.test("thello");
+       console.log(res);
+    </script>
+  </body>
 </html>

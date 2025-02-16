@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          class mobiles{
-               constructor(n,p,r){
-                    this.name=n;
-                    this.price=p
-                    this.ram=r
-               }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class mobiles {
+        constructor(n, p, r) {
+          this.name = n;
+          this.price = p;
+          this.ram = r;
+        }
 
-               updateRam(uram){
-                    this.ram=uram
-               }
-          }
-          let m1=new mobiles("realme 8",16000,"6gb")
-          
-          console.log(m1)
+        updateRam(uram) {
+          this.ram = uram;
+        }
+      }
+      let m1 = new mobiles("realme 8", 16000, "6gb");
 
-          let m2=new mobiles("iphone 15",100000,"128gb")
-          console.log(m2)
+      console.log(m1);
 
-          m2.updateRam("512gb")
-          console.log(m2)
-     </script>
-</body>
+      let m2 = new mobiles("iphone 15", 100000, "128gb");
+      console.log(m2);
+
+      m2.updateRam("512gb");
+      console.log(m2);
+    </script>
+  </body>
 </html>

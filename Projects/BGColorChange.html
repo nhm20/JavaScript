@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #15132c;
+        transition: background 3s;
+      }
+      label{
+          color: white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="special">
+      <label for="">choose color</label>
+      <input type="color" id="color" />
+    </div>
+    <script>
+     //  let colorele = document.getElementById("color");
+     //  colorele.oninput = function () {
+     //    // console.log(this.value)
+     //    document.body.style.background = this.value;
+     //  };
+      let colorele = document.getElementById("color");
+      colorele.addEventListener("input",function() {
+        document.body.style.background = this.value;
+      });
+    </script>
+  </body>
+</html>

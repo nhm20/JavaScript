@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #15132c;
+        transition: background 1s;
+      }
+      h2{
+          color: white;
+
+      }
+    </style>
+  </head>
+  <body>
+     
+     <h2>background color changer</h2>
+    <script>
+          function bgchange(){
+               let s="0123456789abcdef"
+               let color='#'
+               for (let i = 0; i <6; i++) {
+                    let index=Math.floor(Math.random()*16)
+                    color+=s[index]
+               }
+               document.body.style.background=color;
+          }
+          setInterval(bgchange,10)
+    </script>
+  </body>
+</html>

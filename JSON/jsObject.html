@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          let address={
+               city:"hyderabad",
+               state:"ts",
+               10:"ste",
+               getSStateName:function(){
+                    console.log(this.state);
+               }
+          }
+          console.log(address[10]);
+          console.log(address.10);
+          console.log(address."10")
+     </script>
+</body>
+</html>

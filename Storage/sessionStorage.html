@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+     sessionStorage.setItem("state","AP")
+     console.log(sessionStorage.getItem("state"))
+     sessionStorage.setItem("country", "india");
+      sessionStorage.setItem("country", "USA");
+      console.log(sessionStorage.getItem("country"));
+      // window and website specific
+      sessionStorage.removeItem("country");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h1>Captcha Validation</h1>
+     <div class="container">
+          <form action="">
+               <input type="text" id="captchaText" >
+               <input type="text" id="captchaEnter" >
+
+               <input type="button" value="Refresh" id="refreshbtn" class="btn">
+               <input type="button" value="Check" id="checkbtn" class="btn">
+          </form>
+     </div>
+     <script>
+          let captchaText=document.getElementById("captchaText")
+          let captchaEnter=document.getElementById("captchaEnter")
+          let refreshbtn=document.getElementById("refreshbtn")
+          let checkbtn=document.getElementById("checkbtn")
+
+          let chars="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+          
+          let captcha;
+          function generateCaptcha(){
+                captcha="";
+               for (let i = 0; i <7; i++) {
+                   let index= Math.floor(Math.random()*chars.length)
+                    captcha=captcha+chars[index]
+
+               }
+               captchaText.value=captcha
+          }
+
+          function validateCaptcha(){
+               if (captcha==captchaEnter.value) {
+                    alert("valid captch !!!success")
+               }
+               else{
+                    alert("invalid captcha !!!")
+                    captchaEnter.value=""
+               }
+          }
+          generateCaptcha();
+
+          refreshbtn.onclick=generateCaptcha;
+          checkbtn.onclick=validateCaptcha;
+     </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               user-select: none;
+          }
+
+          body{
+               height: 100vh;
+               background-color: #34568b;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+           .box{
+               width:400px ;
+               padding: 20px;
+               background-color: white;
+               border: 4px;
+          }
+          label{
+               width: 40%;
+               height: 45px;
+               margin-left: 30%;
+               padding: 10px;
+               text-align: center;
+               background-color: #1172c4;
+               color: white;
+               font-size: 16px;
+               font-family: sans-serif;
+               border: 5px;
+               border-radius: 5px;
+               cursor: pointer;
+          }
+          #file1{
+               display: none;
+          }
+          img{
+               width: 100%;
+               margin-top: 20px;
+          }
+     </style>
+</head>
+<body>
+     <div class="container">
+          <div class="box">
+               <label for="file1"> Choose Image</label>
+               <input type="file" id="file1" accept="image/*">
+               <div class="preview">
+                    <img src="" alt="" id="img-preview">
+               </div>
+          </div>
+     </div>
+     <script>
+          let file=document.getElementById("file1")
+          let preview=document.getElementById("img-preview")
+
+          file.onchange=function(event){
+               // preview.src=event.target.files[0]
+
+               let src=URL.createObjectURL(event.target.files[0])
+               preview.src=src
+
+               document.querySelector("label").innerText="Change Image"
+          }
+          
+          
+     </script>
+</body>
+</html>

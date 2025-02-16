@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <!-- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
           currying means converting a function that takes n arguments 
           into n functions that each take a single argument and return 
           a function of one argument or result in case of last function
       -->
-     <script>
-          // function sum(a,b,c){
-          //      return a+b+c;
-          // }
-          // console.log(sum(3,4,2))
+    <script>
+      // function sum(a,b,c){
+      //      return a+b+c;
+      // }
+      // console.log(sum(3,4,2))
 
-          function addCurry(a){
-               return function(b){
-                    return function(c){
-                         return a+b+c;
-                    }
-               }
-          } 
-          console.log(addCurry(4)(3)(3));
-     </script>
-</body>
+      function addCurry(a) {
+        return function (b) {
+          return function (c) {
+            return a + b + c;
+          };
+        };
+      }
+      console.log(addCurry(4)(3)(3));
+    </script>
+  </body>
 </html>

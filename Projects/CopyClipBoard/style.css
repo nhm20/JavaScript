@@ -1,0 +1,85 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+     background-color: #fdfcfc;
+}
+.container{
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.text-box{
+     height: 400px;
+     max-width: 660px;
+     margin: 55px 0;
+     padding: 0 30px;
+}
+#title{
+     font-size: 24px;
+}
+#text{
+     height: 100%;
+     width: 100%;
+     padding: 30px;
+     font-size: 15px;
+     font-weight: 400;
+     outline: none;
+     border: 1px solid #265df2;
+     border-radius: 8px;
+     background-color: #e7edfe;
+     text-align: justify;
+}
+#text::-webkit-scrollbar{
+     display:none;
+}
+#copy{
+     position: relative;
+      height: 40px;
+     width: 140px;
+     color: none;
+     outline: none;
+     border:none;
+     border-radius: 8px;
+     background-color: #265df2;
+     font-size: 15px;
+     font-weight: 400;
+     cursor: pointer;
+     margin: 8px 0;
+     transition: all 0.4s;
+}
+#copy:hover{
+     background-color: #0e4bf1;
+}
+.text-box button::before{
+     position: absolute;
+     content: "copied";
+     top: 5px;
+     left:170px ;
+  
+     background:black;
+     padding: 7px 14px;
+     border-radius: 4px;
+     font-size: 18px;
+     display: none;
+}
+.text-box button::after{
+     content: '';
+     position: absolute;
+     top: 17px;
+     left:165px ;
+     width: 10px;
+     height: 10px;
+     background:black;
+     transform: rotate(45deg);
+     display: none;
+}
+.text-box.active button::before,
+.text-box.text-box.active button::after{
+     display: block;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #b6caef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        user-select: none;
+      }
+      .container:hover {
+        cursor: move;
+      }
+      #text {
+        color: #4a82eb;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span id="text">Drag this</span>
+    </div>
+    <script>
+      let box = document.querySelector(".container");
+      box.addEventListener("mousedown", handleMouseDown);
+
+      function handleMouseDown() {
+        box.style.cursor = "move";
+        box.addEventListener("mousemove", handleMouseMove);
+        document.body.addEventListener("mousemove", handleMouseMove);
+        box.addEventListener("mouseup", handleMouseup);
+      }
+
+      function handleMouseMove(e) {
+        // console.log(box.getBoundingClientRect());
+        let rect = box.getBoundingClientRect();
+        box.style.top = `${rect.top + e.movementY}px`;
+        box.style.left = `${rect.left + e.movementX}px`;
+      }
+
+      function handleMouseup() {
+        box.style.cursor = "default";
+        document.body.removeEventListener("mousemove", handleMouseMove);
+      }
+    </script>
+  </body>
+</html>

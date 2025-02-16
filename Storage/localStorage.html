@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      localStorage.setItem("state", "AP");
+      console.log(localStorage.getItem("state"));
+
+      // window and website specific
+      localStorage.removeItem("state");
+
+      console.log(localStorage.length);
+
+      let s = { place: "bangalore", state: "karnataka" };
+      localStorage.setItem("details", s);
+      console.log(localStorage);
+      localStorage.setItem("details2", JSON.stringify(s));
+      console.log(localStorage);
+      console.log(localStorage.getItem("details2"));
+      let p = localStorage.getItem("details2");
+      console.log(JSON.parse(p));
+
+      let x = JSON.parse(p);
+      console.log(s.place);
+
+      localStorage.setItem("marks", [4, 3, 5]);
+      console.log(localStorage.getItem("marks"));
+      let m1 = localStorage.getItem("marks");
+      console.log(typeof m1);
+      console.log(JSON.parse(m1));
+
+      let x1 = JSON.parse(p);
+
+      localStorage.setItem("marks", JSON.stringify([4, 3, 5]));
+      console.log(localStorage.getItem("marks"));
+      m1 = localStorage.getItem("marks");
+      console.log(JSON.parse(m1));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="d1">
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+    </div>
+    <div class="d2">
+      <p>this is paragraph 0</p>
+
+      <p class="p1">
+        this is paragraph 1
+        <span>this is span1</span>
+        <span>this is span2</span>
+      </p>
+      <p>this is paragraph 2</p>
+    </div>
+
+    <script>
+      let div = document.querySelector("div");
+      let p = document.querySelector(".p1");
+      console.log(p);
+      console.log(p.parentElement);
+      console.log(p.children);
+      console.log(p.children[0]);
+      console.log(p.children[1]);
+      console.log(p.childNodes);
+      console.log(p.nextElementSibling);
+      console.log(p.previousElementSibling);
+      console.log(p.parentElement.previousElementSibling.children[1]);
+    </script>
+  </body>
+</html>

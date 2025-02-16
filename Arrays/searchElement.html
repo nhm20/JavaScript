@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cities = ["Hyd", "Che", "Ban", "Mum", "Del"];
+
+      // includes
+      console.log(cities.includes("che"));
+      console.log(cities.includes("Che"));
+
+      // indexof
+      console.log(cities.indexOf("Che"));
+      console.log(cities.indexOf("che"));
+
+      // find
+      let fc = "Che";
+      let res = cities.find((c, i, arr) => {
+        return c == fc;
+        return c.toLocaleLowerCase == fc.toLocaleLowerCase;
+      });
+      console.log(res);
+
+      // filter
+      let sc = "Che";
+      res = cities.filter((c) => c.toLowerCase() == sc.toLowerCase());
+      console.log(res);
+      res = cities.filter((c) => true);
+      console.log(res);
+      res = cities.filter((c) => false);
+      console.log(res);
+    </script>
+  </body>
+</html>

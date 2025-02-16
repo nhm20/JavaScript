@@ -6,6 +6,8 @@
     <title>Document</title>
   </head>
   <body>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" placeholder="YYYY-MM-DD" title="Enter your date of birth" />
     <script>
       let d2 = new Date(10000);
       console.log("d2: " +d2);
@@ -30,6 +32,15 @@
       d1.setDate(1);
       console.log(d1.getDate());
       console.log(days[d1.getDay()]);
+
+
+      let date=document.getElementById("dob");
+      var d3 = new Date(date.value);
+      console.log(d3);
+      var d4 = new Date(date.valueAsDate);
+      console.log(d4);
+      var d5 = new Date(date.valueAsDate.getFullYear());
+      console.log(d5);
     </script>
   </body>
 </html>

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-</head>
-<body>
-     <script>
-          let reg=/sa*/
-          console.log(reg.test("absga"))
-          reg=/sa{4}/
-          console.log(reg.test("absaaaaga"))
-          reg=/sa{1,4}/
-          console.log(reg.test("absaaaaga"))
-          
-          </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let reg = /sa*/; // 0 or more
+      console.log(reg.test("absga"));
+      reg = /sa+/; // 1 or more
+      console.log(reg.test("absga"));
+      reg = /sa?/; // 0 or 1
+      console.log(reg.test("absga"));
+      reg = /sa{4}/; // exactly 4
+      console.log(reg.test("absaaaaga"));
+      reg = /sa{3,}/; // 3 or more
+      console.log(reg.test("absaaaaga"));
+      reg = /sa{1,4}/; // 1 to 4
+      console.log(reg.test("absaaaaga"));
+    </script>
+  </body>
 </html>
