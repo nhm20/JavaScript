@@ -10,9 +10,22 @@
      <!-- <script defer src="script.js"></script> -->
      <!-- download script after html -->
      <!-- <script async src="script.js"></script> -->
-     <script async src="script.js"></script>
+     <script async src="script.js">
+//           The script downloads in parallel while the HTML is being parsed.
+// As soon as the script is downloaded, it pauses HTML parsing and executes the script immediately.
+// Multiple async scripts may execute in any order (whichever downloads first).
+// 🔹 Use case: Best for scripts that don’t depend on the DOM (e.g., analytics, tracking scripts).
+     </script>
      <!-- download script after html and execute and order of execution is their speed of execution -->
      <script defer >alert("hello")</script>
+
+     <!-- The script downloads in parallel while HTML is being parsed.
+It does not block HTML parsing.
+The script executes only after the full HTML is loaded.
+If multiple defer scripts exist, they execute in order.
+🔹 Use case: Best for scripts that manipulate the DOM (e.g., adding event listeners). -->
+
+
 <body>
      <h1>Async vs Defer in script tag</h1>
 </body>

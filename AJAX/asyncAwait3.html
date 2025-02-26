@@ -12,19 +12,15 @@
       let btn = document.getElementById("special");
       let dataele = document.getElementById("data");
       btn.addEventListener("click", loadData);
- 
-      function loadData() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", "test.txt", true); //to get data from server  //true for async
-        // xhr.open('GET','http://www.amazon.com',true)
-        xhr.send();
-        // xhr.send(data)
-        xhr.onprogress = function () {
-          dataele.innerText = "Loading....";
-        };
-        xhr.onload = function () {
-          dataele.innerText = xhr.responseText;
-        };
+
+      async function loadData() {
+        let res = fetch("test.txt");
+        res
+          .then((d) => {
+            console.log(d);
+            d.text();
+          })
+          .then((data) => (dataele.innerHTML = data));
       }
     </script>
   </body>

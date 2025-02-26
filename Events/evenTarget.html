@@ -34,11 +34,17 @@
         console.log("event info");
         console.log(e);
         console.log("this");
-        console.log(this);
+        console.log(this);  //this refers to the element that the event listener is attached to.
+
         console.log("event.target");
         console.log(e.target);
         console.log(e.target.classList.toggle("active"));
       };
+      // p.onclick = function (e) {
+      //   if (e.target.classList.contains("child")) {
+      //     e.target.classList.toggle("active");
+      //   }
+      // };
     </script>
   </body>
 </html>

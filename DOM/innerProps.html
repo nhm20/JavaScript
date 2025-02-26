@@ -13,15 +13,15 @@
     <script>
       var n = document.createElement("h1");
       n.innerText = "<div>this is third paragraph in div2 of innerText</div>";
-      console.log(n); 
-//innerText is used to get the text content of the element
+      console.log(n);
+      //innerText is used to get the text content of the element
       var parent = document.getElementById("first");
       parent.appendChild(n);
 
       var n = document.createElement("cite");
       n.innerHTML = "<h1>this is third paragraph in second</h1>";
       console.log(n);
-//innerHTML is used to get the text content of the element
+      //innerHTML is used to get the text content of the element
       parent.appendChild(n);
 
       console.log(parent.innerText);

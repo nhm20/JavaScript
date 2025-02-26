@@ -13,38 +13,27 @@
       let dataele = document.getElementById("data");
       btn.addEventListener("click", loadData);
 
-      // function loadData(){
-      //      let xhr=new XMLHttpRequest()
-      //      xhr.open('GET','test.txt',true) //to get data from server
-      //      // xhr.open('GET','http://www.amazon.com',true)
-      //      xhr.send()
-      //      // xhr.send(data)
+      function loadData(){
+           let xhr=new XMLHttpRequest()
+           xhr.open('GET','test.txt',true) //to get data from server
+           // xhr.open('GET','http://www.amazon.com',true)
+           xhr.send()
+           // xhr.send(data)
 
-      //      xhr.onreadystatechange=function(){
-      //           if(this.readyState==4 & this.status==200){
-      //                dataele.innerHTML=this.responseText
-      //           }
-      //      }
-      //      xhr.onprogress=function(){
-      //           dataele.innerText="Loading...."
-      //    +  }
-      //      xhr.onload=function(){
-      //           dataele.innerText=xhr.responseText;
-      //      }
-      // }
-
-      async function loadData() {
-        // let res=fetch("test.txt");
-        // res.then(d=>{
-        // console.log(d)
-        // d.text()})
-        // .then(data=>dataele.innerHTML=data)
-
-        let res = await fetch("test.txt");
-        //     console.log(res);
-        let data = res.text();
-        dataele.innerHTML = data;
+           xhr.onreadystatechange=function(){   //this function will be called when the state of the request changes
+                if(this.readyState==4 && this.status==200){
+                     dataele.innerHTML=this.responseText
+                }
+           }
+           xhr.onprogress=function(){
+            console.log("loading...")
+                dataele.innerText="Loading...."
+          }
+           xhr.onload=function(){
+                dataele.innerText=xhr.responseText;
+           }
       }
+      
     </script>
   </body>
 </html>

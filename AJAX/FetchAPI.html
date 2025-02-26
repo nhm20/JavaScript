@@ -10,7 +10,7 @@
       let p = fetch("https://restcountries.com/v3.1/name/india");
       //  console.log(p);
       p.then(function (response) {
-        //    console.log(response);
+        //    console.log(response);    // this will return a promise
         //    console.log(response.json())      // this will return a promise
         response.json().then(function (countryinfo) {
           //.json() will convert the response into json format

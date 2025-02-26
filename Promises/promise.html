@@ -20,7 +20,7 @@
       //      }
       // )
       // console.log(p)
-      let p = new Promise(function (success, error) {
+      let p = new Promise(function (success, error) {   // success and error are callback functions
         let datacame = true;
         if (datacame) {
           success([1, 2, 3, 4, 5]);
@@ -28,7 +28,6 @@
           error("promise not done");
         }
       });
-
       // console.log(p)
       // if promise is success
       p.then(function (data) {
